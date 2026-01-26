@@ -1,5 +1,6 @@
 # Transaction Risk Scoring using Machine Learning
-
+**Dataset:** Kaggle Credit Card Fraud Detection Dataset (mlg-ulb)
+**Evaluation:** ROC-AUC + PR-AUC (Average Precision)
 ## Overview
 This is a beginner-friendly machine learning project that builds an end-to-end supervised learning pipeline for **transaction risk scoring** (binary classification).
 
