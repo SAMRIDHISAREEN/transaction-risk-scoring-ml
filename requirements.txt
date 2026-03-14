@@ -3,3 +3,4 @@ pandas
 scikit-learn
 matplotlib
 jupyter
+pytest==7.3.0
