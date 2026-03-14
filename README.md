@@ -251,6 +251,8 @@ OVERALL: Model is FAIR and treats all customers equally
 ```bash
 pip install -r requirements.txt
 jupyter notebook
+```
+---
 
 ## 🧪 Testing
 
