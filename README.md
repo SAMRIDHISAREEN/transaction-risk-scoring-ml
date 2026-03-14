@@ -274,24 +274,45 @@ pytest tests/test_preprocess.py
 pytest tests/test_models.py
 ```
 
+All tests passing ✅ (12/12)
+
+### Run Tests
+```bash
+pytest tests/ -v
+```
+
+### Test Results
+```
+tests/test_preprocess.py::TestDataLoading::test_data_loads_successfully PASSED
+tests/test_preprocess.py::TestDataLoading::test_data_has_required_columns PASSED
+tests/test_preprocess.py::TestMissingValues::test_no_missing_values_in_data PASSED
+tests/test_preprocess.py::TestFeatureScaling::test_features_are_scaled_correctly PASSED
+tests/test_preprocess.py::TestTargetDistribution::test_target_is_binary PASSED
+tests/test_preprocess.py::TestTargetDistribution::test_target_imbalance_detected PASSED
+tests/test_models.py::TestModelTraining::test_model_trains_successfully PASSED
+tests/test_models.py::TestModelTraining::test_model_makes_predictions PASSED
+tests/test_models.py::TestModelPredictions::test_predictions_are_binary PASSED
+tests/test_models.py::TestModelPredictions::test_probabilities_in_valid_range PASSED
+tests/test_models.py::TestModelEvaluation::test_evaluation_metrics_calculated PASSED
+tests/test_models.py::TestMetricValidity::test_metrics_in_valid_range PASSED
+
+====================== 12 passed in 2.34s ======================
+```
+
 ### What's Tested
 
-**Data Processing:**
-- ✅ Data loads without errors
-- ✅ All required columns present
+**Data (6 tests):**
+- ✅ Data loads
+- ✅ Columns present
 - ✅ No missing values
-- ✅ Features in valid range
+- ✅ Features valid
+- ✅ Target is binary
+- ✅ Class imbalance detected
 
-**Model Training:**
-- ✅ Model trains successfully
-- ✅ Model makes predictions
-- ✅ Predictions are binary (0 or 1)
-- ✅ Probabilities in range [0, 1]
-
-**Evaluation:**
-- ✅ All metrics calculated
-- ✅ Metrics in valid range [0, 1]
-- ✅ Accuracy > 75%
-- ✅ Precision/Recall/AUC-ROC computed
-
-### Example Output
+**Model (6 tests):**
+- ✅ Trains successfully
+- ✅ Makes predictions
+- ✅ Predictions binary
+- ✅ Probabilities valid
+- ✅ Metrics calculated
+- ✅ Metrics in range
