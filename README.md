@@ -251,3 +251,45 @@ OVERALL: Model is FAIR and treats all customers equally
 ```bash
 pip install -r requirements.txt
 jupyter notebook
+
+## 🧪 Testing
+
+This project includes unit tests to verify correctness.
+
+### Run Tests
+```bash
+# Install pytest
+pip install pytest
+
+# Run all tests
+pytest
+
+# Run with verbose output
+pytest -v
+
+# Run specific test file
+pytest tests/test_preprocess.py
+pytest tests/test_models.py
+```
+
+### What's Tested
+
+**Data Processing:**
+- ✅ Data loads without errors
+- ✅ All required columns present
+- ✅ No missing values
+- ✅ Features in valid range
+
+**Model Training:**
+- ✅ Model trains successfully
+- ✅ Model makes predictions
+- ✅ Predictions are binary (0 or 1)
+- ✅ Probabilities in range [0, 1]
+
+**Evaluation:**
+- ✅ All metrics calculated
+- ✅ Metrics in valid range [0, 1]
+- ✅ Accuracy > 75%
+- ✅ Precision/Recall/AUC-ROC computed
+
+### Example Output
